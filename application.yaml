@@ -1,0 +1,31 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rinphearum-12pprinphearumwebhw004
+spec:
+  destination:
+    name: ''
+    namespace: rinphearum
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: app
+    repoURL: 'https://github.com/KSGA-Autopilot/rinphearum-12pprinphearumwebhw004-cd'
+    targetRevision: HEAD
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+project: default
+source:
+  repoURL: 'https://github.com/KSGA-Autopilot/rinphearum-12pprinphearumwebhw004-cd'
+  path: app
+  targetRevision: HEAD
+destination:
+  server: 'https://kubernetes.default.svc'
+  namespace: rinphearum
+syncPolicy:
+  automated:
+    prune: true
+    selfHeal: true
