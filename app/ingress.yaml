@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rinphearum-12pprinphearumwebhw004-ingress
+  namespace: rinphearum
+spec:
+  tls:
+    - hosts:
+        - demo.auto-pilot.dev
+      secretName: demo-auto-pilot-dev-cert
+  rules:
+    - host: demo.auto-pilot.dev
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: rinphearum-12pprinphearumwebhw004-svc
+                port:
+                  number: 3000
