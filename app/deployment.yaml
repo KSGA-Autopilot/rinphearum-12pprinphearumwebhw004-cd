@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: rinphearum-12pprinphearumwebhw004
-          image: kshrdautopilot/rinphearum-12pprinphearumwebhw004
+          image: kshrdautopilot/rinphearum-12pprinphearumwebhw004:2023-12-01-06-25-26
           ports:
             - containerPort: 3000
