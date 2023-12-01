@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rinphearum-12pprinphearumwebhw004-deployment
+  labels:
+    app: rinphearum-12pprinphearumwebhw004
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rinphearum-12pprinphearumwebhw004
+  template:
+    metadata:
+      labels:
+        app: rinphearum-12pprinphearumwebhw004
+    spec:
+      containers:
+        - name: rinphearum-12pprinphearumwebhw004
+          image: kshrdautopilot/rinphearum-12pprinphearumwebhw004
+          ports:
+            - containerPort: 3000
